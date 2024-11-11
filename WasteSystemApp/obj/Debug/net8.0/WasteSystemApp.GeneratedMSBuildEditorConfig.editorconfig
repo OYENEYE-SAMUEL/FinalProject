@@ -1,0 +1,191 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WasteSystemApp
+build_property.RootNamespace = WasteSystemApp
+build_property.ProjectDir = C:\Users\USER\Desktop\MyFinalProject\WasteSystemApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\USER\Desktop\MyFinalProject\WasteSystemApp
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/wwwroot/Template/assets/authentication-register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxUZW1wbGF0ZVxhc3NldHNcYXV0aGVudGljYXRpb24tcmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/ActiveContracts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWN0aXZlQ29udHJhY3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/AllAgent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWxsQWdlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/AllCommunity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWxsQ29tbXVuaXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/AllIndividuals.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWxsSW5kaXZpZHVhbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/AllStaffs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWxsU3RhZmZzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/AssignRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXNzaWduUmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/CreatePlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlUGxhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/DashBoard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaEJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/ExpiredPlans.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRXhwaXJlZFBsYW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/PendingContracts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGVuZGluZ0NvbnRyYWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/PendingPlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGVuZGluZ1BsYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Admin/RegisterStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVnaXN0ZXJTdGFmZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Community/AllRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuaXR5XEFsbFJlcXVlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Community/DashBoard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuaXR5XERhc2hCb2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Community/GetAllReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuaXR5XEdldEFsbFJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Community/MakePayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuaXR5XE1ha2VQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Community/MakeReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuaXR5XE1ha2VSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Community/RegisterCommunity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuaXR5XFJlZ2lzdGVyQ29tbXVuaXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Community/ViewAllPlans.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuaXR5XFZpZXdBbGxQbGFucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Community/WasteReqest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbXVuaXR5XFdhc3RlUmVxZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/GovernmentAgent/MakeContract.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR292ZXJubWVudEFnZW50XE1ha2VDb250cmFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/GovernmentAgent/RegisterGovernment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR292ZXJubWVudEFnZW50XFJlZ2lzdGVyR292ZXJubWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/GovernmentAgent/ViewContract.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR292ZXJubWVudEFnZW50XFZpZXdDb250cmFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Individual/AllRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaXZpZHVhbFxBbGxSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Individual/GetAllReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaXZpZHVhbFxHZXRBbGxSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Individual/MakeReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaXZpZHVhbFxNYWtlUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Individual/RegisterPerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaXZpZHVhbFxSZWdpc3RlclBlcnNvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Individual/ViewAllPlans.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaXZpZHVhbFxWaWV3QWxsUGxhbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Individual/ViewPlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaXZpZHVhbFxWaWV3UGxhbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Individual/WasteReqest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kaXZpZHVhbFxXYXN0ZVJlcWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Staff/LocationAssignTo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcTG9jYXRpb25Bc3NpZ25Uby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/MyFinalProject/WasteSystemApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-omk1wx9ki5

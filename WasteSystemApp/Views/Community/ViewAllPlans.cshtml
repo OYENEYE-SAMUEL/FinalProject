@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Application.DTOs.SubscriptionResponseModel>
+
+@{
+    ViewData["Title"] = "ViewAllPlans";
+}
+
+<h1>ViewAllPlans</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Frequency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentPlanDateStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentPlanDateEnd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentPlanType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Frequency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentPlanDateStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentPlanDateEnd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentPlanType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,108 @@
+﻿/* General Styling */
+h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .table thead th {
+        background-color: #3498db;
+        color: white;
+        padding: 15px;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: 1px solid #ddd;
+    }
+
+    .table tbody tr {
+        border-bottom: 1px solid #ddd;
+        transition: background-color 0.3s ease;
+    }
+
+        .table tbody tr:hover {
+            background-color: #eaf2f8;
+        }
+
+    .table tbody td {
+        padding: 12px;
+        text-align: center;
+        font-size: 15px;
+        color: #34495e;
+    }
+
+        .table tbody td a {
+            color: #3498db;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+            .table tbody td a:hover {
+                text-decoration: underline;
+            }
+
+        /* Action Links Styling */
+        .table tbody td:last-child {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .table tbody td a {
+            padding: 5px 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+            .table tbody td a:hover {
+                background-color: #3498db;
+                color: white;
+            }
+
+/* Responsive Table for Mobile View */
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+        .table tr {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .table td {
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+        }
+
+            .table td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: calc(50% - 20px);
+                font-weight: bold;
+                color: #34495e;
+                text-align: left;
+            }
+}

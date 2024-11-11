@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Layout</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <!-- Your header, sidebar, or navigation goes here -->
+
+       
+
+        <div class="card">
+            <a asp-controller="Admin" asp-action="AllStaffs">All Staff</a>
+          
+        </div>
+        <div class="card">
+            <a asp-controller="Admin" asp-action="AllCommunity">All Community</a>
+          
+        </div>
+
+        <!-- Optionally, render additional sections if needed, like a footer or scripts -->
+    </div>
+</body>
+</html>

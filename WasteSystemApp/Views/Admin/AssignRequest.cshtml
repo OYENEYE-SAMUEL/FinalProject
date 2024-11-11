@@ -1,0 +1,16 @@
+﻿@* @model AssignCollectionViewModel
+
+<form asp-action="AssignCollectionsToStaff" method="post">
+    <label for="staffSelect">Select Staff</label>
+    <select asp-for="StaffId" asp-items="@(new SelectList(Model.StaffCollections, "StaffId", "FirstName"))">
+        <option value="">--Select a Staff--</option>
+    </select>
+
+    <label for="collectionsSelect">Select Waste Collections</label>
+    <select asp-for="WasteCollection" multiple asp-items="@(new SelectList(Model.WasteCollections, "CollectionId", "Location"))">
+    </select>
+
+    <button type="submit">Assign Collections</button>
+</form>
+
+ *@

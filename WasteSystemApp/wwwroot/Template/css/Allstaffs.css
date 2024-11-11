@@ -1,0 +1,122 @@
+﻿/* General Page Styling */
+h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+p a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4a90e2;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    p a:hover {
+        background-color: #357abd;
+    }
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+}
+
+    .table thead th {
+        background-color: #4a90e2;
+        color: #fff;
+        padding: 12px;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: 1px solid #ddd;
+    }
+
+    .table tbody tr {
+        border-bottom: 1px solid #ddd;
+        transition: background-color 0.3s ease;
+    }
+
+        .table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+    .table tbody td {
+        padding: 10px;
+        text-align: center;
+        font-size: 15px;
+        color: #555;
+    }
+
+        .table tbody td a {
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+            .table tbody td a:hover {
+                text-decoration: underline;
+            }
+
+        /* Active Status Styling */
+        .table tbody td:last-child {
+            text-align: center;
+        }
+
+        .table tbody td .status-active {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .table tbody td .status-inactive {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+        .table tr {
+            margin-bottom: 15px;
+        }
+
+        .table td {
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+        }
+
+            .table td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+}

@@ -1,0 +1,94 @@
+﻿/* Page Header */
+h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fbfc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .table thead th {
+        background-color: #3498db;
+        color: white;
+        padding: 15px;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: 1px solid #ddd;
+    }
+
+    .table tbody tr {
+        border-bottom: 1px solid #ddd;
+        transition: background-color 0.3s ease;
+    }
+
+        .table tbody tr:hover {
+            background-color: #ecf3f9;
+        }
+
+    .table tbody td {
+        padding: 12px;
+        text-align: center;
+        font-size: 15px;
+        color: #34495e;
+    }
+
+        /* Action Links */
+        .table tbody td a {
+            color: #3498db;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+            .table tbody td a:hover {
+                text-decoration: underline;
+            }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table, .table thead, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+        .table thead {
+            display: none;
+        }
+
+        .table tbody tr {
+            margin-bottom: 15px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .table td {
+            padding-left: 50%;
+            position: relative;
+            text-align: right;
+        }
+
+            .table td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                font-weight: bold;
+                color: #34495e;
+                text-align: left;
+            }
+}

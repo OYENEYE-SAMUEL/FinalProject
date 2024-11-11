@@ -1,0 +1,138 @@
+﻿@using Domain.Enum
+@model Application.DTOs.SubscriptionRequestModel
+
+<style>
+    /* Form Container */
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: #333;
+        font-weight: bold;
+    }
+
+    /* Form Styling */
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-control {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+        }
+
+    /* Button Styling */
+    .btn-primary {
+        background-color: #4a90e2;
+        border-color: #4a90e2;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #357abd;
+        }
+
+    /* Link Styling */
+    a {
+        color: #4a90e2;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    /* Validation Message Styling */
+    .text-danger {
+        font-size: 0.875rem;
+        color: #d9534f;
+    }
+
+</style>
+
+
+
+@{
+    ViewData["Title"] = "CreatePlan";
+}
+
+<h1>Create Plan</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreatePlan">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Frequency" class="control-label"></label>
+                <select class="form-control" asp-for="Frequency" asp-items="Html.GetEnumSelectList<Frequency>()">
+                    <option value="">Select Frequency</option>
+                </select>
+                <span asp-validation-for="Frequency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentPlanDateStart" class="control-label"></label>
+                <input asp-for="CurrentPlanDateStart" class="form-control" />
+                <span asp-validation-for="CurrentPlanDateStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentPlanType" class="control-label"></label>
+                <select class="form-control" asp-for="CurrentPlanType" asp-items="Html.GetEnumSelectList<PlanType>()">
+                    <option value="">Select plan</option>
+                </select>
+                <span asp-validation-for="CurrentPlanType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+    @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        // Enable date picker if the browser does not support HTML5 date input
+        document.addEventListener("DOMContentLoaded", function() {
+            const dateInput = document.querySelector("input[type='date']");
+            if (!dateInput) {
+                // Load date picker library if needed, or use a fallback.
+                console.warn("HTML5 date picker not supported, consider using a library.");
+            }
+        });
+    </script>
+}
+
+
