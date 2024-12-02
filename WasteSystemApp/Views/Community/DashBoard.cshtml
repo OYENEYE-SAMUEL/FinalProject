@@ -1,183 +1,244 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using Domain.Enum
+@model IEnumerable<Application.DTOs.SubscriptionResponseModel>
+
+
+    @{
+        Layout = "_CommunityLayout";
+    }
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Template/landing/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
         }
-
-        body {
-            display: flex;
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f5f7fa;
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
-
-        .sidebar {
-            width: 250px;
-            background-color: #4a4e69;
-            padding: 20px;
-            color: #fff;
-            height: 100vh;
-        }
-
-            .sidebar .logo {
-                font-size: 1.5rem;
-                font-weight: bold;
-                margin-bottom: 20px;
-                color: #f9f9f9;
-            }
-
-            .sidebar nav ul {
-                list-style-type: none;
-            }
-
-                .sidebar nav ul li {
-                    margin: 15px 0;
-                }
-
-                    .sidebar nav ul li a {
-                        color: #a8dadc;
-                        text-decoration: none;
-                        font-size: 1.1rem;
-                        display: block;
-                        padding: 10px;
-                        border-radius: 5px;
-                        transition: background-color 0.3s;
-                    }
-
-                        .sidebar nav ul li a.active,
-                        .sidebar nav ul li a:hover {
-                            background-color: #3a3d55;
-                            color: #fff;
-                        }
-
-        .main-content {
-            flex: 1;
-            padding: 20px;
-            background-color: #ffffff;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .search-bar input {
-            width: 200px;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .icons .notification-icon,
-        .icons .profile-icon {
+        .card-header {
+            padding: 1.5rem;
             font-size: 1.5rem;
-            margin-left: 15px;
-            cursor: pointer;
+            font-weight: bold;
         }
-
-        .dashboard-widgets {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
+        .card-body ul li {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #555;
         }
-
-        .widget {
-            background-color: #fafafa;
-            border-radius: 10px;
-            padding: 20px;
-            flex: 1;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        .btn {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
         }
-
-            .widget h3 {
-                font-size: 1.2rem;
-                margin-bottom: 10px;
-            }
-
-            .widget .progress-bar {
-                height: 10px;
-                background-color: #ddd;
-                border-radius: 5px;
-                overflow: hidden;
-            }
-
-                .widget .progress-bar div {
-                    height: 100%;
-                    background-color: #4a90e2;
-                }
-
-        .chart-section {
-            margin-top: 30px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-            .chart-section h2 {
-                margin-bottom: 15px;
-            }
-
     </style>
 </head>
-<body>
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-        <div class="logo">AdminDash</div>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Dashboard</a></li>
-                <li><a href="#">Users</a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </nav>
-    </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Header -->
-        <header>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-            </div>
-            <div class="icons">
-                <span class="notification-icon">🔔</span>
-                <span class="profile-icon">👤</span>
-            </div>
-        </header>
 
-        <!-- Dashboard Widgets -->
-        <section class="dashboard-widgets">
-            <div class="widget">
-                <h3>New Customers</h3>
-                <div class="progress-bar"><div style="width: 90%"></div></div>
-                <p>90% of goal</p>
-            </div>
-            <div class="widget">
-                <h3>Total Income</h3>
-                <p>$680</p>
-                <small>+18%</small>
-            </div>
-        </section>
+            <body>
+                <div class="container-fluid py-5">
+                    <div class="container py-5">
+                        <div class="text-center mb-5">
+                            <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">
+                                Our Pricing
+                            </h5>
+                        </div>
 
-        <!-- Revenue Chart Section -->
-        <section class="chart-section">
-            <h2>Revenue Forecast</h2>
-            <canvas id="revenueChart"></canvas>
-        </section>
-    </div>
-</body>
-</html>
+                        @if (Model != null && Model.Any())
+                        {
+                            <div class="row g-4">
+                                @if (Model.Any(e => e.CurrentPlanType == PlanType.Basic))
+                                {
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card shadow-sm h-100">
+                                            <div class="card-header bg-primary text-white text-center rounded-top">
+                                                <h2>Basic</h2>
+                                            </div>
+                                            <div class="card-body text-center">
+                                                <h3 class="text-primary">
+                                                    @Model.FirstOrDefault(e => e.CurrentPlanType == PlanType.Basic)?.Price.ToString("C")
+                                                    <span class="text-secondary fs-6">/weekly</span>
+                                                </h3>
+                                                <p>Basic Waste Pickup</p>
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-check text-success me-2"></i>Pickup Services</li>
+                                                    <li><i class="fa fa-check text-success me-2"></i>Trash</li>
+                                                    <li><i class="fa fa-check text-success me-2"></i>Recycling</li>
+                                                    <li><i class="fa fa-check text-success me-2"></i>Yard Waste</li>
+                                                </ul>
+                                                <a href="@Url.Action("MakePayment", "Community")" class="btn btn-primary rounded-pill mt-3">
+                                                    Buy Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                                @if (Model.Any(e => e.CurrentPlanType == PlanType.Standard))
+                                {
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card shadow-sm h-100">
+                                            <div class="card-header bg-dark text-white text-center rounded-top">
+                                                <h2>Standard</h2>
+                                            </div>
+                                            <div class="card-body text-center">
+                                                <h3 class="text-dark">
+                                                    @Model.FirstOrDefault(e => e.CurrentPlanType == PlanType.Standard)?.Price.ToString("C")
+                                                    <span class="text-secondary fs-6">/monthly</span>
+                                                </h3>
+                                                <p>Standard Waste Pickup</p>
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-check text-success me-2"></i>Lodging Solutions</li>
+                                                    <li><i class="fa fa-check text-success me-2"></i>Convention Centers</li>
+                                                    <li><i class="fa fa-check text-success me-2"></i>Re-Service</li>
+                                                </ul>
+                                                <a href="@Url.Action("MakePayment", "Community")" class="btn btn-dark rounded-pill mt-3">
+                                                    Buy Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                                @if (Model.Any(e => e.CurrentPlanType == PlanType.Premium))
+                                {
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card shadow-sm h-100">
+                                            <div class="card-header bg-success text-white text-center rounded-top">
+                                                <h2>Premium</h2>
+                                            </div>
+                                            <div class="card-body text-center">
+                                                <h3 class="text-success">
+                                                    @Model.FirstOrDefault(e => e.CurrentPlanType == PlanType.Premium)?.Price.ToString("C")
+                                                    <span class="text-secondary fs-6">/yearly</span>
+                                                </h3>
+                                                <p>Premium Waste Pickup</p>
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-check text-success me-2"></i>Dumpster Rental</li>
+                                                    <li><i class="fa fa-check text-success me-2"></i>Construction Waste</li>
+                                                    <li><i class="fa fa-check text-success me-2"></i>Bulk Pickup</li>
+                                                </ul>
+                                                <a href="@Url.Action("MakePayment", "Community")" class="btn btn-success rounded-pill mt-3">
+                                                    Buy Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            <p class="text-center text-danger">No subscriptions available at the moment.</p>
+                        }
+                    </div>
+                </div>
+            </body>
+
+
+
+
+
+       @*      @if (Model.Any(e => e.CurrentPlanType == PlanType.Basic))
+            {
+                <div class="row g-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="rounded bg-light pricing-item">
+                            <div class="bg-primary py-3 px-5 text-center rounded-top border-bottom border-dark">
+                                <h2 class="m-0">Basic</h2>
+                            </div>
+                            <div class="px-4 py-5 text-center bg-primary pricing-label mb-2">
+                                <h1 class="mb-0">
+                                    @Model.FirstOrDefault(e => e.CurrentPlanType == PlanType.Basic)?.Price.ToString("C")
+                                    <span class="text-secondary fs-5 fw-normal">/weekly</span>
+                                </h1>
+                                <p class="mb-0">Basic Waste Pickup</p>
+                            </div>
+                            <div class="p-4 text-center fs-5">
+                                <p><i class="fa fa-check text-success me-2"></i>Pickup Services</p>
+                                <p><i class="fa fa-check text-success me-2"></i>Trash</p>
+                                <p><i class="fa fa-check text-success me-2"></i>Re-Service at No-Charge</p>
+                                <p><i class="fa fa-check text-success me-2"></i>Recycling</p>
+                                <p><i class="fa fa-check text-success me-2"></i>Yard Waste</p>
+                                <a href="@Url.Action("MakePayment", "Community")" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-3">
+                                    Buy Now
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            } *@
+
+          @*   @if (Model.Any(e => e.CurrentPlanType == PlanType.Standard))
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="rounded bg-light pricing-item">
+                        <div class="bg-dark py-3 px-5 text-center rounded-top border-bottom border-primary">
+                            <h2 class="m-0 text-primary">Standard</h2>
+                        </div>
+                        <div class="px-4 py-5 text-center bg-dark pricing-label pricing-featured mb-2">
+                            <h1 class="mb-0 text-primary">
+                                @Model.FirstOrDefault(e => e.CurrentPlanType == PlanType.Standard)?.Price.ToString("C")
+                                <span class="fs-5 fw-normal">/mo</span>
+                            </h1>
+                            <p class="mb-0 text-white">Standard Waste Pickup</p>
+                        </div>
+                        <div class="p-4 text-center fs-5">
+                            <p><i class="fa fa-check text-success me-2"></i> Lodging Solutions</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Convention Centers</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Re-Service at No-Charge</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Re</p>
+                            <p><i class="fa fa-check text-success me-2"></i>SmartEnergy Compactor</p>
+                            <a href="@Url.Action("MakePayment", "Community")" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-3">
+                                Buy Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            } *@
+
+@* 
+            @if (Model.Any(e => e.CurrentPlanType == PlanType.Premium))
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="rounded bg-light pricing-item">
+                        <div class="bg-primary py-3 px-5 text-center rounded-top border-bottom border-dark">
+                            <h2 class="m-0">Premium</h2>
+                        </div>
+                        <div class="px-4 py-5 text-center bg-primary pricing-label mb-2">
+                            <h1 class="mb-0">
+                                @Model.FirstOrDefault(e => e.CurrentPlanType == PlanType.Premium)?.Price.ToString("C")
+                                <span class="text-secondary fs-5 fw-normal">/yr</span>
+                            </h1>
+                            <p class="mb-0">Premium Pest Control</p>
+                        </div>
+                        <div class="p-4 text-center fs-5">
+                            <p><i class="fa fa-check text-success me-2"></i>Dumpster Rental</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Construction Waste</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Re-Service at No-Charge</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Bagster Bag</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Bulk Pickup</p>
+                            <a href="@Url.Action("MakePayment", "Community")" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-3">
+                                Buy Now
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            } *@
+
+    
+@* 
+    <script src="~/Template/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="~/Template/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Template/assets/js/sidebarmenu.js"></script>
+    <script src="~/Template/assets/js/app.min.js"></script> *@
+   @*  <script src="~/Template/assets/libs/apexcharts/dist/apexcharts.min.js"></script> *@
+ @*    <script src="~/Template/assets/libs/simplebar/dist/simplebar.js"></script> *@
+ @*    <script src="~/Template/assets/js/dashboard.js"></script> *@
+
+

@@ -3,617 +3,509 @@
 }
 
 
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <title>WasteManagment - Waste Management System</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    <!--====== Title ======-->
-    <title>Waste Management System</title>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!--====== Favicon Icon ======-->  
-    <link rel="shortcut icon" href="~/Template/landing/assets/images/Solid_Waste_Management.png" type="image/png">
+    <!-- Libraries Stylesheet -->
+    <link href="~/Template/landing/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/Template/landing/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Customized Bootstrap Stylesheet -->  
+    <link href="~/Template/landing/css/bootstrap.min.css" rel="stylesheet">
 
-    <!--====== Animate CSS ======-->  
-    <link rel="stylesheet" href="~/Template/landing/assets/css/animate.css">
-
-    <!--====== Line Icons CSS ======-->
-    <link rel="stylesheet" href="~/Template/landing/assets/css/LineIcons.css">
-
-    <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="~/Template/landing/assets/css/bootstrap.min.css">
-
-    <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="~/Template/landing/assets/css/default.css">
-
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="~/Template/landing/assets/css/style.css">
-
+    <!-- Template Stylesheet -->
+    <link href="~/Template/landing/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->
-    <!--====== PRELOADER PART START ======-->
-
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar-top bg-primary">
+        <div class="container">
+            <div class="d-flex justify-content-between topbar py-2">
+                <div class="d-flex align-items-center flex-shrink-0 topbar-info">
+                    <a href="#" class="me-4 text-secondary"><i class="fas fa-map-marker-alt me-2 text-dark"></i>189, P.M.B, Sapon Abeokuta</a>
+                    <a href="#" class="me-4 text-secondary"><i class="fas fa-phone-alt me-2 text-dark"></i>+2348132590745</a>
+                    <a href="#" class="text-secondary"><i class="fas fa-envelope me-2 text-dark"></i>wastemanagment@gmail.com</a>
+                </div>
+                <div class="text-end pe-4 me-4 border-end border-dark search-btn">
+                    <div class="search-form">
+                        <form method="post" action="index.html">
+                            <div class="form-group">
+                                <div class="d-flex">
+                                    <input type="search" class="form-control border-0 rounded-pill" name="search-input" value="" placeholder="Search Here" required="" />
+                                    <button type="submit" value="Search Now!" class="btn"><i class="fa fa-search text-dark"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center topbar-icon">
+                    <a href="#" class="me-4"><i class="fab fa-facebook-f text-dark"></i></a>
+                    <a href="#" class="me-4"><i class="fab fa-twitter text-dark"></i></a>
+                    <a href="#" class="me-4"><i class="fab fa-instagram text-dark"></i></a>
+                    <a href="#" class=""><i class="fab fa-linkedin-in text-dark"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-dark navbar-expand-lg py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-primary mb-0 display-5">Waste<span class="text-white"> Management</span><i class="fa fa-trash text-primary ms-2"></i></h1>
+                </a>
+                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-dark"></span>
+                </button>
+                <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="#" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <a href="@Url.Action("Login", "Login")" class="nav-item nav-link">Login</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pring Plan</a>
+                            <div class="dropdown-menu m-0 bg-primary">
+                                <a href="@Url.Content("~/Views/Home/Index.cshtml")" class="dropdown-item">Pricing Plan</a>
+                            </div>
                         </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
+                        <a href="#" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    <!-- Carousel Start -->
+    <div class="container-fluid carousel px-0 mb-5 pb-5">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="@Url.Content("~/Template/landing/img/wasteland.jpg")" class="img-fluid w-100" alt="First slide">
+                    <div class="carousel-caption">
+                        <div class="container carousel-content">
+                            <h4 class="text-white mb-4 animated slideInDown">Control Air Pollution</h4>
+                            <h1 class="text-white display-1 mb-4 animated slideInDown">Waste Management System</h1>
+                            <button type="button" class="px-5 py-3 btn btn-primary border-2 rounded-pill animated slideInDown">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="@Url.Content("~/Template/landing/img/garbage.jpg")" class="img-fluid w-100" alt="Second slide">
+                    <div class="carousel-caption">
+                        <div class="container carousel-content">
+                            <h4 class="text-white mb-4 animated slideInDown">Dumping Waste Properly</h4>
+                            <h1 class="text-white display-1 mb-4 animated slideInDown">Waste Management System</h1>
+                           <button type="button" class="px-5 py-3 btn btn-primary border-2 rounded-pill animated slideInDown">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev btn btn-primary border border-2 border-start-0 border-primary" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next btn btn-primary border border-2 border-end-0 border-primary" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+    <!-- Get In Touch Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay=".3s">
+        <div class="container py-5">
+            <div class="bg-light px-4 py-5 rounded">
+                <div class="text-center">
+                    <h1 class="display-5 mb-5">To enjoy service</h1>
+                </div>
+                <form class="text-center mb-4" action="#">
+                    <div class="row g-4">
+                        <div class="col-xl-10 col-lg-12">
+                            <div class="row g-4">
+                                
+                                <div class="col-md-6 col-xl-3">
+                                    <input type="text" class="form-control p-3 border-0" placeholder="Name">
+                                </div>
+                                <div class="col-md-6 col-xl-3">
+                                    <input type="text" class="form-control p-3 border-0" placeholder="Phone">
+                                </div>
+                                <div class="col-md-6 col-xl-3">
+                                    <input type="email" class="form-control p-3 border-0" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-12">
+                            <button type="button" class="btn btn-primary w-100 p-3 border-0" onclick="location.href='@Url.Action("Login", "Login")'">GET STARTED</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Get In Touch End -->
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="about-img">
+                        <div class="rotate-left bg-dark"></div>
+                        <div class="rotate-right bg-dark"></div>
+                        <img src="@Url.Content("~/Template/landing/img/wastevehicle.jpg")" class="img-fluid h-100" alt="img">
+                        <div class="bg-white experiences">
+                            <h1 class="display-3">20</h1>
+                            <h6 class="fw-bold">Years Of Experiences</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="about-item overflow-hidden">
+                        <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">About WasteManagment</h5>
+                        <h1 class="display-5 mb-2">World Record Waste Management Company</h1>
+                        <p class="fs-5" style="text-align: justify;">
+                            Join us in creating a healthier, cleaner community! Our waste management services are designed to help you
+                            responsibly dispose of waste, reduce pollution, and support recycling initiatives
+                        </p>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="text-center">
+                                    <div class="p-4 bg-dark rounded d-flex" style="align-items: center; justify-content: center;">
+                                        <i class="fas fa-city fa-4x text-primary"></i>
+                                    </div>
+                                    <div class="my-2">
+                                        <h5>Doorstep Pickup</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="text-center">
+                                    <div class="p-4 bg-dark rounded d-flex" style="align-items: center; justify-content: center;">
+                                        <i class="fas fa-school fa-4x text-primary"></i>
+                                    </div>
+                                    <div class="my-2">
+                                        <h5>Schools Center</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="text-center">
+                                    <div class="p-4 bg-dark rounded d-flex" style="align-items: center; justify-content: center;">
+                                        <i class="fas fa-warehouse fa-4x text-primary"></i>
+                                    </div>
+                                    <div class="my-2">
+                                        <h5>Industrial PickUp</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="text-center">
+                                    <div class="p-4 bg-dark rounded d-flex" style="align-items: center; justify-content: center;">
+                                        <i class="fas fa-hospital fa-4x text-primary"></i>
+                                    </div>
+                                    <div class="my-2">
+                                        <h5>Eatery Pickup</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-5">Find Services</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Services Start -->
+    <div class="container-fluid services py-5">
+        <div class="container text-center py-5">
+            <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+                <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Our Services</h5>
+                <h1 class="display-5">Commonly Services Render</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-xxl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="bg-light rounded p-5 services-item">
+                        <div class="d-flex" style="align-items: center; justify-content: center;">
+                            <div class="mb-4 rounded-circle services-inner-icon">
+                                <i class="fa fa-truck fa-3x text-primary"></i>
+                            </div>
+                        </div>
+                        <h4>Garbage Trailer</h4>
+                        <p class="fs-5">Always at the point of attention.</p>
+                        <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="bg-light rounded p-5 services-item">
+                        <div class="d-flex" style="align-items: center; justify-content: center;">
+                            <div class="mb-4 rounded-circle services-inner-icon">
+                                <i class="fa fa-trash fa-3x text-primary"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-center">Waste Taker</h4>
+                        <p class="text-center fs-5">Active to pick to the appropriate location</p>
+                        <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="bg-light rounded p-5 services-item">
+                        <div class="d-flex" style="align-items: center; justify-content: center;">
+                            <div class="mb-4 rounded-circle services-inner-icon">
+                                <i class="fa bi-person fa-3x text-primary"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-center">Standby staff</h4>
+                        <p class="text-center fs-5">Available to please all waste request to the pleasure of clients.</p>
+                        <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".9s">
+                    <div class="bg-light rounded p-5 services-item">
+                        <div class="d-flex" style="align-items: center; justify-content: center;">
+                            <div class="mb-4 rounded-circle services-inner-icon">
+                                <i class="fa fa-recycle fa-3x text-primary"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-center">Doorstep Dumping</h4>
+                        <p class="text-center fs-5">Without any stress going at your service.</p>
+                        <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-4 wow fadeInUp" data-wow-delay=".3s">More Services</button>
+        </div>
+    </div>
+    <!-- Services End -->
+    <!-- Project Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+                <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Our Project</h5>
+                <h1 class="display-5">Awesome Services in Meaningful Way</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-xxl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="project-item">
+                        <div class="project-left bg-dark"></div>
+                        <div class="project-right bg-dark"></div>
+                        <img src="@Url.Content("~/Template/landing/img/dumpingwaste.jpg")" class="img-fluid h-100" alt="img">
+                        <a href="" class="fs-4 fw-bold text-center">Residential Waste Collection</a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="project-item">
+                        <div class="project-left bg-dark"></div>
+                        <div class="project-right bg-dark"></div>
+                        <img src="@Url.Content("~/Template/landing/img/staffwaste.jpg")" class="img-fluid h-100" alt="img">
+                        <a href="" class="fs-4 fw-bold text-center">Waste Segregation and Recycling</a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="project-item">
+                        <div class="project-left bg-dark"></div>
+                        <div class="project-right bg-dark"></div>
+                        <img src="@Url.Content("~/Template/landing/img/wasteput.jpg")" class="img-fluid h-100" alt="img">
+                        <a href="" class="fs-4 fw-bold text-center">Waste Treatment and Disposal</a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="project-item">
+                        <div class="project-left bg-dark"></div>
+                        <div class="project-right bg-dark"></div>
+                        <img src="@Url.Content("~/Template/landing/img/wastgather.jpeg")" class="img-fluid h-100" alt="img">
+                        <a href="" class="fs-4 fw-bold text-center">Public Health Improvement</a>
+                    </div>
+                </div>
+                
+           
+        </div>
+    </div>
+    </div>
+    <!-- Project End -->
+   
+    
+    <!-- pricing Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+                <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Our Pricing</h5>
+                <h1 class="display-5 w-50 mx-auto">Affordable Pricing Plan For Waste Management Services</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="rounded bg-light pricing-item">
+                        <div class="bg-primary py-3 px-5 text-center rounded-top border-bottom border-dark">
+                            <h2 class="m-0">Basic</h2>
+                        </div>
+                        <div class="px-4 py-5 text-center bg-primary pricing-label mb-2">
+                            <h1 class="mb-0">#90,000<span class="text-secondary fs-5 fw-normal">/weekly</span></h1>
+                            <p class="mb-0">Basic Waste Pickup</p>
+                        </div>
+                        <div class="p-4 text-center fs-5">
+                            <p><i class="fa fa-check text-success me-2"></i>Pickup Services</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Trash</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Re-Service at No-Charge</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Recycling</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Yard Waste</p>
+                            <button type="button"  class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-3">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="rounded bg-light pricing-item">
+                        <div class="bg-dark py-3 px-5 text-center rounded-top border-bottom border-primary">
+                            <h2 class="m-0 text-primary">Standard</h2>
+                        </div>
+                        <div class="px-4 py-5 text-center bg-dark pricing-label pricing-featured mb-2">
+                            <h1 class="mb-0 text-primary">#120,000<span class="fs-5 fw-normal">/mo</span></h1>
+                            <p class="mb-0 text-white">Standard Waste Pickup</p>
+                        </div>
+                        <div class="p-4 text-center fs-5">
+                            <p><i class="fa fa-check text-success me-2"></i> Lodging Solutions</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Convention Centers</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Re-Service at No-Charge</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Re</p>
+                            <p><i class="fa fa-check text-success me-2"></i>SmartEnergy Compactor</p>
+                            <button type="button" class="btn btn-dark border-0 text-primary rounded-pill px-4 py-3 mt-3">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="rounded bg-light pricing-item">
+                        <div class="bg-primary py-3 px-5 text-center rounded-top border-bottom border-dark">
+                            <h2 class="m-0">Premium</h2>
+                        </div>
+                        <div class="px-4 py-5 text-center bg-primary pricing-label mb-2">
+                            <h1 class="mb-0">#200,000<span class="text-secondary fs-5 fw-normal">/yr</span></h1>
+                            <p class="mb-0">Premium Pest Control</p>
+                        </div>
+                        <div class="p-4 text-center fs-5">
+                            <p><i class="fa fa-check text-success me-2"></i>Dumpster Rental</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Construction Waste</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Re-Service at No-Charge</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Bagster Bag</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Bulk Pickup</p>
+                            <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-3">Get Started</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!--====== PRELOADER PART ENDS ======-->
-    <!--====== HEADER PART START ======-->
-
-    <section class="header_area">
-        <div class="header_navbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="@Url.Content("~/Template/landing/assets/images/Solid_Waste_Management.png")" alt="Logo">
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul id="nav" class="navbar-nav ml-auto">
-                                    <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#about">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#services">Services</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <!-- <a class="page-scroll" href="#Login">Login</a> -->
-                                        <a class="page-scroll" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">Contact</a>
-                                    </li>
-                                </ul>
-                            </div> <!-- navbar collapse -->
-                        </nav> <!-- navbar -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header navbar -->  
-
-        <div id="home" class="header_slider">
-            <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url('@Url.Content("~/Template/landing/assets/images/istockphoto-627470744-1024x1024.jpg")')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-10 col-md-10">
-                            <div class="slider_content">
-                                <h2 class="slider_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">You are using free lite version</h2>
-                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">We’re committed to ensuring your waste is collected on time, every time</p>
-                                <a href="#" id="startNowButton" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Start Now</a>
-                            </div> <!-- slider content -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-        </div> <!-- header slider -->
-
-
-    </section> 
-
-    <!--====== HEADER PART ENDS ======-->
-    <!--====== FEATURES PART START ======-->
-
-    <section id="features" class="features_area pt-100 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                        <div class="features_image">
-                            <img src="@Url.Content("~/Template/landing/assets/images/istockphoto-1341903801-1024x1024.jpg")" alt="features">
-                        </div>
-                        <div class="features_content">
-                            <h4 class="features_title"><a href="#">Waste Pickup</a></h4>
-                        </div>
-                    </div> <!-- single features -->  
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <div class="features_image">
-                            <img src="@Url.Content("~/Template/landing/assets/images/wastestaff.png")" alt="features">
-                        </div>
-                        <div class="features_content">
-                            <h4 class="features_title"><a href="#">Waste Takers</a></h4>
-                        </div>
-                    </div> <!-- single features -->  
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                        <div class="features_image">
-                            <img src="@Url.Content("~/Template/landing/assets/images/mt-1238-home-img02.jpg")" alt="features">
-                        </div>
-                        <div class="features_content">
-                            <h4 class="features_title"><a href="#">Recycling Services</a></h4>
-                        </div>
-                    </div> <!-- single features -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== FEATURES PART ENDS ======-->
-    <!--====== ABOUT PART START ======-->
-
-    <section id="about" class="about_area pt-80 pb-130">   
-        <div class="about_bg d-none d-lg-block">
-            <div class="about_bg_image bg_cover" style="background-image: url('@Url.Content("~/Template/landing/assets/images/istockphoto-627470744-1024x1024.jpg")')"></div>
-        </div> <!-- about bg -->
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about_image mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <img src="@Url.Content("~/Template/landing/assets/images/The-Benefits-of-Waste-Collection-Services-for-Your-Business-1536x1024.jpg")" alt="About">
-                    </div> <!-- about image -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="about_content mt-50 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <h3 class="sub_title"><span>Many</span> Years of Experience</h3>
-                        <h4 class="main_title">Providing the best quality service</h4>
-                        <p>
-                            Help the planet by reducing waste, recycling efficiently, and promoting sustainability
-                            Our system ensures that your waste is properly sorted and disposed of, keeping harmful materials out of landfills
-                            So also, Enjoy secure, hassle-free payment options and stay on top of your subscription without any stress.
-                            Say goodbye to irregular waste pickups and overflowing bins.
-                            With CleanWaste Solutions, enjoy a clean and organized neighborhood effortlessly <br> <br> Our detailed reports and insights make waste management
-                            transparent and easy to monitor. Together, let's build cleaner, greener communities..
-                        </p>
-                        <a href="#" class="main-btn">Read More</a>
-                    </div> <!-- about content -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== ABOUT PART ENDS ======-->
-    <!--====== SERVICES PART START ======-->
-
-    <section id="services" class="services_area pt-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section_title">
-                        <h4 class="title">Awesome Services in Meaningful Way</h4>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                        <div class="services_icon">
-                            <i class="lni lni-compass"></i>
-                        </div>
-                        <div class="services_content">
-                            <h4 class="title">Residential Waste Collection</h4>
-                            <p>Regular pickup of household waste to prevent accumulation.</p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <div class="services_icon">
-                            <i class="lni lni-apartment"></i>
-                        </div>
-                        <div class="services_content">
-                            <h4 class="title">Waste Segregation and Recycling</h4>
-                            <p>
-                                Encourages residents and industries to segregate waste
-                                (organic, recyclable, and hazardous) before disposal
-                                Also, Collection and processing of paper, plastics, metals, and e-waste to minimize landfill use.
-                            </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                        <div class="services_icon">
-                            <i class="lni lni-construction"></i>
-                        </div>
-                        <div class="services_content">
-                            <h4 class="title">Waste Treatment and Disposal</h4>
-                            <p>
-                                Safe disposal of waste to prevent contamination of soil and water.
-                                Also, Incineration and other processes to generate electricity from waste.
-                            </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                        <div class="services_icon">
-                            <i class="lni lni-ruler-pencil"></i>
-                        </div>
-                        <div class="services_content">
-                            <h4 class="title">Environmental Protection and Pollution Control</h4>
-                            <p>
-                                Prevents pollution caused by improper waste disposal,
-                                Enforces rules to ensure that waste management sites do not harm the environment
-                                and  Reduces risks of diseases spread by rodents, insects, and other pests.
-                            </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <div class="services_icon">
-                            <i class="lni lni-brush-alt"></i>
-                        </div>
-                        <div class="services_content">
-                            <h4 class="title"> Public Health Improvement</h4>
-                            <p>
-                                Ensures clean surroundings, reducing exposure to pathogens from untreated waste,
-                                Prevents contamination from biohazardous waste through proper handling and disposal.
-                            </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                        <div class="services_icon">
-                            <i class="lni lni-bolt"></i>
-                        </div>
-                        <div class="services_content">
-                            <h4 class="title">Governance and Compliance Services</h4>
-                            <p>
-                                Implements laws to ensure businesses and households comply with waste management regulations,
-                                Provides licenses for private waste handlers and monitors their operations.
-                            </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== SERVICES PART ENDS ======-->
-    <!--====== GALLERY PART START ======-->
-    <!-- <section id="gallery" class="gallery_area pt-120 pb-130">
-        <div class="container">
-                                <h2 class="slider_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">You are using free lite version</h2>
-                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Please, consider purchasing full version of the template to get all section and features</p>
-                                <a href="https://rebrand.ly/arch-ui" rel="nofollow" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Login Now</a>
-        </div> <-- container -->
-    <!-- </section> -->
-    <!--====== GALLERY PART ENDS ======-->
-    <!--====== COUNTER PART START ======-->
-
-    <section id="counter" class="counter_area bg_cover pt-120 pb-130" style="background-image: url('@Url.Content("~/Template/landing/assets/images/wastestaff.png")')">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section_title section_title_2 text-center pb-25">
-                        <h4 class="title">Our Achievements<br> in Numbers</h4>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-3 col-sm-3 col-6">
-                    <div class="single_counter text-center mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                        <div class="counter_icon">
-                            <i class="lni lni-happy"></i>
-                        </div>
-                        <div class="counter_content">
-                            <span>3874</span>
-                            <p>Happy Clients</p>
-                        </div>
-                    </div> <!-- single counter -->
-                </div>
-                <div class="col-lg-3 col-sm-3 col-6">
-                    <div class="single_counter text-center mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                        <div class="counter_icon">
-                            <i class="lni lni-checkmark-circle"></i>
-                        </div>
-                        <div class="counter_content">
-                            <span>3874</span>
-                            <p>Projects Done</p>
-                        </div>
-                    </div> <!-- single counter -->
-                </div>
-                <div class="col-lg-3 col-sm-3 col-6">
-                    <div class="single_counter text-center mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.6s">
-                        <div class="counter_icon">
-                            <i class="lni lni-users"></i>
-                        </div>
-                        <div class="counter_content">
-                            <span>3874</span>
-                            <p>Team Members</p>
-                        </div>
-                    </div> <!-- single counter -->
-                </div>
-                <div class="col-lg-3 col-sm-3 col-6">
-                    <div class="single_counter text-center mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                        <div class="counter_icon">
-                            <i class="lni lni-cup"></i>
-                        </div>
-                        <div class="counter_content">
-                            <span>3874</span>
-                            <p>Awards Won</p>
-                        </div>
-                    </div> <!-- single counter -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== COUNTER PART ENDS ======-->
-    <!--====== TEAM PART START ======-->
-    <!-- <section id="team" class="team_area pt-120 pb-130">
-        <div class="container">
-                                <h2 class="slider_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">You are using free lite version</h2>
-                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Please, consider purchasing full version of the template to get all section and features</p>
-                                <a href="https://rebrand.ly/arch-ui" rel="nofollow" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Purchase Now</a>
-        </div> < container >
-    </section>
-
-    <--====== TEAM PART ENDS ======-->
-    <!--====== TESTIMONIAL PART START ======-->
-    <!-- <section id="testimonial" class="testimonial_area bg_cover pt-120 pb-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section_title section_title_2 text-center pb-55">
-                        <h4 class="title">Testimonials From</br> Happy Clients</h4>
-                    </div> <section title -->
-    <!-- </div> -->
-    <!-- </div> <row> -->
-    <!-- <div class="container">
-                            <h2 class="slider_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">You are using free lite version</h2>
-                            <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Please, consider purchasing full version of the template to get all section and features</p>
-                            <a href="https://rebrand.ly/arch-ui" rel="nofollow" class="main-btn wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.8s">Purchase Now</a>
-    </div> <container -->
-    <!-- </div> <container> -->
-    <!-- </section> -->
-    <!--====== TESTIMONIAL PART ENDS ======-->
-    <!--====== BRAND LOGO PART START ======-->
-    <!-- <section id="brand" class="brand_logo_area pt-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section_title text-center pb-25">
-                        <h4 class="title">Proud Member of<br> Great Associations</h4>
-                    </div> <-- section title -->
-    <!-- </div> -->
-    <!-- </div> <--row -->
-    <!-- <div class="row">
-        <div class="col-lg-2 col-md-2 col-6 col-sm-4">
-            <div class="single_logo mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                <img src="assets/images/logo-1.jpg" alt="logo">
-            </div> <-- single logo -->
-    <!-- </div> -->
-    <!-- <div class="col-lg-2 col-md-2 col-6 col-sm-4">
-        <div class="single_logo mt-30 logo_2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-            <img src="assets/images/logo-2.jpg" alt="logo">
-        </div> <--single logo -->
-    <!-- </div> -->
-    <!-- <div class="col-lg-2 col-md-2 col-6 col-sm-4">
-        <div class="single_logo mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.6s">
-            <img src="assets/images/logo-3.jpg" alt="logo">
-        </div> single logo -->
-    <!-- </div> -->
-    <!-- <div class="col-lg-2 col-md-2 col-6 col-sm-4">
-        <div class="single_logo mt-30 logo_2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
-            <img src="assets/images/logo-4.jpg" alt="logo">
-        </div> <-- single logo -->
-    <!-- </div> -->
-    <!-- <div class="col-lg-2 col-md-2 col-6 col-sm-4">
-        <div class="single_logo mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.2s">
-            <img src="assets/images/logo-5.jpg" alt="logo">
-        </div> single logo -->
-    <!-- </div>
-    <div class="col-lg-2 col-md-2 col-6 col-sm-4">
-        <div class="single_logo mt-30 logo_2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s">
-            <img src="assets/images/logo-6.jpg" alt="logo">
-        </div> <--single logo -->
-    <!-- </div> -->
-    <!-- </div> <--row-->
-    <!-- </div> <-- container -->
-    <!-- </section> -->
-    <!--====== BRAND LOGO PART ENDS ======-->
-    <!--====== CONTACT PART START ======-->
-
-    <section id="contact" class="contact_area pt-80 pb-130">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="contact_form mt-40 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <div class="section_title pb-25">
-                            <h4 class="title">REGISTER FORM</h4>
-                        </div> <!-- section title -->
-
-                        <form id="contact-form" action="assets/contact.php" method="post">
-                            <div class="single_form">
-                                <input name="name" type="text" placeholder="Name">
-                            </div> <!-- single form -->
-
-                            <div class="single_form">
-                                <input name="email" type="email" placeholder="Email">
-                            </div> <!-- single form -->
-
-                            <div class="single_form">
-                                <input name="subject" type="text" placeholder="Subject">
-                            </div> <!-- single form -->
-
-                            <div class="single_form">
-                                <input name="number" type="text" placeholder="Contact Number">
-                            </div> <!-- single form -->
-
-                            <div class="single_form">
-                                <textarea name="message" placeholder="Message"></textarea>
-                            </div> <!-- single form -->
-
-                            <p class="form-message"></p>
-
-                            <div class="single_form">
-                                <button class="main-btn">SUBMIT</button>
-                            </div> <!-- single form -->
-                        </form>
-                    </div> <!-- contact form -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="contact_info mt-40 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                        <div class="section_title pb-25">
-                            <h4 class="title">Contact Us</h4>
-                        </div> <!-- section title -->
-                        <p> Get detailed insights into your waste management habits and monitor 
-                            your environmental impact through easy-to-understand dashboards and reports.</p>
-
-                        <div class="single_info d-flex align-items-center">
-                            <div class="info_icon">
-                                <i class="lni lni-phone"></i>
-                            </div>
-                            <div class="info_content media-body">
-                                <p>+2348132590745</p>
-                            </div>
-                        </div> <!-- single info -->
-
-                        <div class="single_info d-flex align-items-center">
-                            <div class="info_icon">
-                                <i class="lni lni-envelope"></i>
-                            </div>
-                            <div class="info_content media-body">
-                                <p>wastemanagment@info.com</p>
-                            </div>
-                        </div> <!-- single info -->
-
-                        <div class="single_info d-flex align-items-center">
-                            <div class="info_icon">
-                                <i class="lni lni-world"></i>
-                            </div>
-                            <div class="info_content media-body">
-                                <p>www.wastemanagmentsystem.com</p>
-                            </div>
-                        </div> <!-- single info -->
-
-                        <div class="single_info d-flex align-items-center">
-                            <div class="info_icon">
-                                <i class="lni lni-map"></i>
-                            </div>
-                            <div class="info_content media-body">
-                                <p>24, P.M.B, Sapon, Abeokuta <br />Nigeria</p>
-                            </div>
-                        </div> <!-- single info -->
-                    </div> <!-- contact info -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== CONTACT PART ENDS ======-->
-    <!--====== FOOTER PART START ======-->
-
-    <section class="footer_area bg_cover" style="background-image:url('@Url.Content("~/Template/landing/assets/images/footer_bg.jpg")')">
-        <div class="container">
-            <div class="footer_widget pt-80 pb-130">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="footer_about mt-50">
-                            <a href="#"><img src="@Url.Content("~/Template/landing/assets/images/istockphoto-627470744-1024x1024.jpg")" alt="logo"></a>
-                            <p>Lorem ipsum dolor sit consetetur sadipscing elitr, sed diamnonumy eirmod tempor inidunt ut labore et dolore. Lorem ipsum dolor sit consetetur sadipscing elitr, sed diamnonumy eirmod tempor inidunt ut labore et dolore.</p>
-                        </div> <!-- footer about -->
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="footer_link_wrapper d-flex flex-wrap">
-                            <div class="footer_link mt-45">
-                                <h4 class="footer_title">Compnay</h4>
-                                <ul class="link">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Service</a></li>
-                                    <li><a href="#">Gallery</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                </ul>
-                            </div> <!-- footer link -->
-                            <div class="footer_link mt-45">
-                                <h4 class="footer_title">Support</h4>
-                                <ul class="link">
-                                    <li><a href="#">Terms & Condition</a></li>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Policy</a></li>
-                                    <li><a href="#">Leal</a></li>
-                                    <li><a href="#">Leal</a></li>
-                                </ul>
-                            </div> <!-- footer link -->
-                            <div class="footer_link mt-45">
-                                <h4 class="footer_title">Socials</h4>
-                                <ul class="link">
-                                    <li><a href="#">Facebook</a></li>
-                                    <li><a href="#">Twitter</a></li>
-                                    <li><a href="#">Instageam</a></li>
-                                    <li><a href="#">Linkdin</a></li>
-                                    <li><a href="#">Pintarest</a></li>
-                                </ul>
-                            </div> <!-- footer link -->
-                        </div> <!-- footer link wrapper -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- footer widget -->
-            <div class="footer_copyright text-center">
-                <p>Designed and Developed by <a href="www.facebook.com" rel="nofollo">UIdeck</a></p>
-            </div>
-        </div> <!-- container -->
-    </section>
-
-    <!--====== FOOTER PART ENDS ======-->
-    <!--====== BACK TOP TOP PART START ======-->
-
-    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
-
-    <!--====== BACK TOP TOP PART ENDS ======-->
-    <!--====== Jquery js ======-->
-    <script src="~/Template/landing/assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="~/Template/landing/assets/js/vendor/modernizr-3.7.1.min.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="~/Template/landing/assets/js/popper.min.js"></script>
-    <script src="~/Template/landing/assets/js/bootstrap.min.js"></script>
-
-
-    <!--====== Scrolling Nav js ======-->
-    <script src="~/Template/landing/assets/js/jquery.easing.min.js"></script>
-    <script src="~/Template/landing/assets/js/scrolling-nav.js"></script>
-
-    <!--====== WOW js ======-->
-    <script src="~/Template/landing/assets/js/wow.min.js"></script>
+    <!-- Pricing End -->
    
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay=".3s">
+        <div class="container py-5">
+            <div class="row g-4 footer-inner">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-white fw-bold mb-4">About WasteManagment.</h4>
+                        <p>s a structured process designed to handle waste from its generation to disposal in a safe, efficient, and environmentally responsible manner.</p>
+                        <p class="mb-0"><a class="" href="#">WasteManagment </a> &copy; 2024 All Right Reserved.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-white fw-bold mb-4">Usefull Link</h4>
+                        <div class="d-flex flex-column align-items-start">
+                            <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>About Us</a>
+                            <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Contact Us</a>
+                            <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Our Services</a>
+                            <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Terms & Condition</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-white fw-bold mb-4">Services Link</h4>
+                        <div class="d-flex flex-column align-items-start">
+                            <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Industrial PickUp</a>
+                            <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Office Pickup</a>
+                            <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Company Patnership</a>
+                            <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Government Sector</a>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-item">
+                        <h4 class="text-white fw-bold mb-4">Contact Us</h4>
+                        <a href="" class="btn btn-link w-100 text-start ps-0 pb-3 border-bottom rounded-0"><i class="fa fa-map-marker-alt me-3"></i>189, P.M.B, Sapon Abeokuta</a>
+                        <a href="" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-phone-alt me-3"></i>+2348132590745</a>
+                        <a href="" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-envelope me-3"></i>wastemanagmentsystem@info.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <a href="#" class="text-primary mb-0 display-6">
+                        Waste<span class="text-white"> Management</span><i class="fa fa-trash text-primary ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 copyright-btn text-center text-md-start mb-3 mb-md-0 flex-shrink-0">
+                    <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
 
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Template/landing/lib/wow/wow.min.js"></script>
+    <script src="~/Template/landing/lib/easing/easing.min.js"></script>
+    <script src="~/Template/landing/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/Template/landing/lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!--====== Main js ======-->
-    <script src="~/Template/landing/assets/js/main.js"></script>
-    <script>
-       
-    </script>
-
+    <!-- Template Javascript -->
+    <script src="~/Template/landing/js/main.js"></script>
 </body>
 
 </html>

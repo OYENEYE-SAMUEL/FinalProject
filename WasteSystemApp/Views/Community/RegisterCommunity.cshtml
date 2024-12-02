@@ -4,12 +4,114 @@
     ViewData["Title"] = "RegisterCommunity";
 }
 
-<h1>RegisterCommunity</h1>
+    <style >
+    /* Style for the body to set the background color */
+    body {
+        background-color: #fff9e6; /* Soft yellow background */
+        font-family: 'Arial', sans-serif; /* Nice font for readability */
+        margin: 0;
+        padding: 0;
+        color: #333; /* Dark gray for text */
+    }
 
-<h4>CommunityRequestModel</h4>
+    /* Container for the form */
+    .row {
+        max-width: 600px; /* Centered form width */
+        margin: 30px auto; /* Center horizontally and add margin */
+        padding: 30px; /* Padding around the form */
+        background-color: #fff; /* White background for form container */
+        border-radius: 10px; /* Rounded corners */
+        border: 2px solid #ffd700; /* Gold border */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Elegant shadow */
+    }
+
+    /* Form group styling */
+    .form-group {
+        margin-bottom: 20px; /* Space between form groups */
+    }
+
+    /* Label styling */
+    .control-label {
+        font-weight: bold; /* Bold labels */
+        margin-bottom: 8px; /* Space below labels */
+        color: #444; /* Slightly darker text color for labels */
+    }
+
+    /* Input field styling */
+    .form-control {
+        border: 1px solid #333; /* Black border */
+        border-radius: 5px; /* Rounded corners for inputs */
+        padding: 12px; /* Padding inside input fields */
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Include padding in width */
+        background-color: #fdfbe4; /* Light yellow input background */
+        color: #000; /* Black text for inputs */
+    }
+
+        /* Input field focus effect */
+        .form-control:focus {
+            border-color: #ffd700; /* Gold border on focus */
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.8); /* Glow effect */
+            outline: none; /* Remove default outline */
+        }
+
+    /* Button styling */
+    .btn {
+        background-color: #ffd700; /* Gold button */
+        color: #000; /* Black text */
+        padding: 12px 20px; /* Padding for button */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        font-weight: bold; /* Bold text */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth hover transition */
+    }
+
+        .btn:hover {
+            background-color: #e6c200; /* Darker gold on hover */
+            color: #fff; /* White text on hover */
+        }
+
+    /* Validation message styling */
+    .text-danger {
+        font-size: 0.9em; /* Slightly smaller font for error messages */
+        color: #d9534f; /* Bootstrap danger color */
+    }
+
+    /* Link styling */
+    a {
+        color: #ffd700; /* Gold color for links */
+        text-decoration: none; /* Remove underline */
+        font-weight: bold; /* Bold text */
+    }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #e6c200; /* Darker gold on hover */
+        }
+
+    /* Heading styling */
+    h1 {
+        text-align: center; /* Center the heading */
+        color: #333; /* Dark gray text */
+        font-size: 2.5em; /* Large font size */
+        margin-bottom: 20px; /* Space below heading */
+        text-transform: uppercase; /* Uppercase text */
+        letter-spacing: 2px; /* Add spacing between letters */
+    }
+
+    /* HR line styling */
+    hr {
+        border: 1px solid #ffd700; /* Gold line */
+        margin: 20px 0; /* Spacing above and below line */
+    }
+</style>
+
+
+<h1>Register Community</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form asp-action="RegisterCommunity">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -34,19 +136,20 @@
             </div>
             <div class="form-group">
                 <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
+                <input asp-for="Password" class="form-control" type="password" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="form-group text-center">
+                <input type="submit" value="Create" class="btn" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="text-center">
+    <a asp-action="I">Go Back</a>
 </div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -255,3 +255,4 @@ C:\Users\USER\Desktop\MyFinalProject\WasteManagementApi\obj\Debug\net8.0\refint\
 C:\Users\USER\Desktop\MyFinalProject\WasteManagementApi\obj\Debug\net8.0\WasteManagementApi.pdb
 C:\Users\USER\Desktop\MyFinalProject\WasteManagementApi\obj\Debug\net8.0\WasteManagementApi.genruntimeconfig.cache
 C:\Users\USER\Desktop\MyFinalProject\WasteManagementApi\obj\Debug\net8.0\ref\WasteManagementApi.dll
+C:\Users\USER\Desktop\MyFinalProject\WasteManagementApi\obj\Debug\net8.0\WasteManagementApi.sourcelink.json

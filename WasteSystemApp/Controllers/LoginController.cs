@@ -7,13 +7,13 @@ namespace WasteSystemApp.Controllers
 {
     public class LoginController : Controller
     {
-        Uri baseAddress = new Uri("https://localhost:7068/api");
         private readonly HttpClient _client;
 
         public LoginController(IHttpClientFactory factory)
         {
             _client = factory.CreateClient();
-            _client.BaseAddress = baseAddress;
+            _client.Timeout = TimeSpan.FromMinutes(5); 
+
         }
         public IActionResult Login()
         {

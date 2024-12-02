@@ -35,11 +35,11 @@ namespace WasteSystemApp.Controllers
         {
             try
             {
-                var response = await _client.PostAsJsonAsync("https://localhost:7068/api/Communities/registercommunity", request);
+                var response = await _client.PostAsJsonAsync("https://localhost:7068/api/Community/registercommunity", request);
                 if (response.IsSuccessStatusCode)
                 {
                     TempData["success"] = await response.Content.ReadAsStringAsync();
-                    return RedirectToAction("DashBoard");
+                    return RedirectToAction("Login", "Login");
                 }
 
                 else

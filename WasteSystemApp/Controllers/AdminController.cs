@@ -82,7 +82,7 @@ namespace WasteSystemApp.Controllers
         [HttpGet]
         public async Task<IActionResult> AllAgent()
         {
-            var response = await _client.GetAsync("https://localhost:7068/api/GovernmentAgents/getall");
+            var response = await _client.GetAsync("https://localhost:7068/api/GovernmentAgent/allgovernments");
             if (response.IsSuccessStatusCode)
             {
                 var agent = await response.Content.ReadAsStringAsync();

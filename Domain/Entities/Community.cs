@@ -12,8 +12,8 @@ namespace Domain.Entities
         public ICollection<WasteCollection> WasteCollections { get; set; }
             = new HashSet<WasteCollection>();
         public ICollection<WasteReport> WasteReports { get; set; } = new HashSet<WasteReport>();
-        public Subscription Subscription { get; set; } = default!;
-        public Guid SubscriptionId { get; set; }
+        public Subscription? Subscription { get; set; } = default!;
+        public Guid? SubscriptionId { get; set; }
         public bool IsActive { get; set; }
         public DateTime DateCreated { get; set; }
     }

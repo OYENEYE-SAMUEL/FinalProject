@@ -1,0 +1,84 @@
+﻿/* General Body Styling */
+body {
+    background-color: #f8f9fa; /* Slightly lighter background */
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+/* Logo */
+.logo-img img {
+    max-width: 120px;
+}
+
+/* Form Labels */
+.form-label {
+    font-weight: 500;
+    color: #444; /* Slightly lighter for a modern look */
+}
+
+/* Input Fields */
+.form-control {
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: #ffc107; /* Yellow focus color */
+        box-shadow: 0 0 8px rgba(255, 193, 7, 0.3);
+    }
+
+/* Validation Error Messages */
+.text-danger {
+    font-size: 0.875rem;
+}
+
+/* Submit Button */
+.btn-primary {
+    background-color: #ffc107;
+    border: none;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-primary:hover {
+        background-color: #ffdd57; /* Brighter yellow */
+        transform: scale(1.03);
+    }
+
+/* Footer Links */
+.text-primary {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+    .text-primary:hover {
+        text-decoration: underline;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        margin: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+    }
+}

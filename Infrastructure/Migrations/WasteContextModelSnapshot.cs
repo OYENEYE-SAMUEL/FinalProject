@@ -47,7 +47,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<Guid>("SubscriptionId")
+                    b.Property<Guid?>("SubscriptionId")
                         .HasColumnType("char(36)");
 
                     b.Property<string>("TagNumber")
@@ -190,10 +190,19 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<string>("ReferenceNumber")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
+                    b.Property<Guid?>("SubscriptionId")
+                        .HasColumnType("char(36)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("SubscriptionId");
 
                     b.ToTable("Payments");
                 });
@@ -221,8 +230,8 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4dd715d0-61b0-4a15-998a-3e3412d438b1"),
-                            DateCreated = new DateTime(2024, 10, 30, 15, 27, 49, 282, DateTimeKind.Utc).AddTicks(8543),
+                            Id = new Guid("07163a41-30b2-472f-bdfb-040ac334c4a7"),
+                            DateCreated = new DateTime(2024, 11, 28, 16, 20, 12, 1, DateTimeKind.Utc).AddTicks(7076),
                             IsActive = true,
                             Name = "Admin"
                         });
@@ -333,12 +342,12 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3cdd30b0-0234-4ce7-b7be-7708d7bb4ad6"),
+                            Id = new Guid("72e8ebcb-e93c-45b9-9844-bd1c81f20059"),
                             Email = "admin@gmail.com",
                             FullName = "Admin",
                             IsActive = true,
-                            Password = "$2a$11$zFlYlj4lxWLKn8kHFLvcLO6PZQzkpPG2RNEE3twqORrWPkV.dmvAW",
-                            RoleId = new Guid("4dd715d0-61b0-4a15-998a-3e3412d438b1")
+                            Password = "$2a$11$g6yf9x5Y4QhnDMOIzCw/keQUXpuVHUGAqweJP.n4TpmfUCPe2/VLm",
+                            RoleId = new Guid("07163a41-30b2-472f-bdfb-040ac334c4a7")
                         });
                 });
 
@@ -433,9 +442,7 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Domain.Entities.Subscription", "Subscription")
                         .WithMany("Communities")
-                        .HasForeignKey("SubscriptionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SubscriptionId");
 
                     b.Navigation("Subscription");
                 });
@@ -456,6 +463,15 @@ namespace Infrastructure.Migrations
                         .HasForeignKey("SubscriptionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Subscription");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Payment", b =>
+                {
+                    b.HasOne("Domain.Entities.Subscription", "Subscription")
+                        .WithMany()
+                        .HasForeignKey("SubscriptionId");
 
                     b.Navigation("Subscription");
                 });
@@ -481,7 +497,7 @@ namespace Infrastructure.Migrations
                         .WithMany("WasteCollections")
                         .HasForeignKey("GovernmentAgentId");
 
-                    b.HasOne("Domain.Entities.Individual", null)
+                    b.HasOne("Domain.Entities.Individual", "Individual")
                         .WithMany("WasteCollections")
                         .HasForeignKey("IndividualId");
 
@@ -492,6 +508,8 @@ namespace Infrastructure.Migrations
                     b.Navigation("Community");
 
                     b.Navigation("GovernmentAgent");
+
+                    b.Navigation("Individual");
 
                     b.Navigation("Staff");
                 });
@@ -506,7 +524,7 @@ namespace Infrastructure.Migrations
                         .WithMany()
                         .HasForeignKey("GovernmentAgentId");
 
-                    b.HasOne("Domain.Entities.Individual", null)
+                    b.HasOne("Domain.Entities.Individual", "Individual")
                         .WithMany("WasteReports")
                         .HasForeignKey("IndividualId");
 
@@ -517,6 +535,8 @@ namespace Infrastructure.Migrations
                     b.Navigation("Community");
 
                     b.Navigation("GovernmentAgent");
+
+                    b.Navigation("Individual");
 
                     b.Navigation("WasteCollection");
                 });

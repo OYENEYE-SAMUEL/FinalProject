@@ -80,7 +80,7 @@ namespace Application.Services
                 Email = request.Email,
                 Address = request.Address,
                 PhoneNumber = request.PhoneNumber,
-                TagNumber = Guid.NewGuid().ToString().Substring(2, 10),
+                TagNumber = Guid.NewGuid().ToString().Substring(8),
                 IsActive = true,
                 DateCreated = DateTime.UtcNow,
             };

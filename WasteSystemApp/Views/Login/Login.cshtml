@@ -92,11 +92,18 @@
 	            </div>
 	          </form>
 	          <p class="w-100 text-center">&mdash; Or Sign Up As &mdash;</p>
-	          <div class="social d-flex text-center">
-	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Individual</a>
-	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Community</a>
-				  <a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Government</a>
-	          </div>
+						<div class="social d-flex justify-content-center text-center">
+							<a asp-controller="Individual" asp-action="RegisterPerson" class="px-3 py-2 mx-2 rounded">
+								<span class="ion-logo-facebook mr-2"></span> Individual
+							</a>
+							<a asp-controller="Community" asp-action="RegisterCommunity" class="px-3 py-2 mx-2 rounded">
+								<span class="ion-logo-twitter mr-2"></span> Community
+							</a>
+							<a asp-controller="GovernmentAgent" asp-action="RegisterGovernment" class="px-3 py-2 mx-2 rounded">
+								<span class="ion-logo-twitter mr-2"></span> Government
+							</a>
+						</div>
+
 		      </div>
 				</div>
 			</div>

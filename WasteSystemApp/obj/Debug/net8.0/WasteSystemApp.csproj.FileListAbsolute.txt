@@ -240,3 +240,4 @@ C:\Users\USER\Desktop\MyFinalProject\WasteSystemApp\obj\Debug\net8.0\refint\Wast
 C:\Users\USER\Desktop\MyFinalProject\WasteSystemApp\obj\Debug\net8.0\WasteSystemApp.pdb
 C:\Users\USER\Desktop\MyFinalProject\WasteSystemApp\obj\Debug\net8.0\WasteSystemApp.genruntimeconfig.cache
 C:\Users\USER\Desktop\MyFinalProject\WasteSystemApp\obj\Debug\net8.0\ref\WasteSystemApp.dll
+C:\Users\USER\Desktop\MyFinalProject\WasteSystemApp\obj\Debug\net8.0\WasteSystemApp.sourcelink.json

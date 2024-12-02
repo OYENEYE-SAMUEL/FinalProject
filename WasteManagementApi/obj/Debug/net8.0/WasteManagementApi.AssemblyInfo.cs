@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WasteManagementApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53b6e31221ca4348f6e3b3a82f6d3921f2ffa52a")]
 [assembly: System.Reflection.AssemblyProductAttribute("WasteManagementApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WasteManagementApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

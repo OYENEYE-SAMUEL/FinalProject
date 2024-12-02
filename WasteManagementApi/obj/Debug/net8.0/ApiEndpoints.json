@@ -335,16 +335,6 @@
   },
   {
     "ContainingType": "WasteManagementApi.Controllers.WasteCollectionsController",
-    "Method": "GetAllWasteRequest",
-    "RelativePath": "api/WasteCollections",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WasteManagementApi.Controllers.WasteCollectionsController",
     "Method": "GetRequest",
     "RelativePath": "api/WasteCollections/{id}",
     "HttpMethod": "GET",
@@ -357,6 +347,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WasteManagementApi.Controllers.WasteCollectionsController",
+    "Method": "GetAllWasteRequest",
+    "RelativePath": "api/WasteCollections/allconnections",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

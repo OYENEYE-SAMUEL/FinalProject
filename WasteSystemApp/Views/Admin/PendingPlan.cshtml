@@ -1,9 +1,125 @@
-﻿@model IEnumerable<Application.DTOs.SubscriptionResponseModel>
+﻿@using Domain.Enum
+@model IEnumerable<Application.DTOs.SubscriptionResponseModel>
 
 
+   @*  <head>
+    <link rel="stylesheet" href="~/Template/assets/css/styles.min.css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Template/landing/css/bootstrap.min.css" rel="stylesheet">
+   
+    </head>
+
+
+<p>
+    <a asp-action="CreatePlan">Create New</a>
+</p>
+
+
+
+<body>
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+                <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Our Pricing</h5>
+                <h1 class="display-5 w-50 mx-auto">Affordable Pricing Plan For Waste Management Services</h1>
+            </div>
+
+            @if (Model.Any(e => e.CurrentPlanType == PlanType.Basic))
+            {
+                <div class="row g-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="rounded bg-light pricing-item">
+                            <div class="bg-primary py-3 px-5 text-center rounded-top border-bottom border-dark">
+                                <h2 class="m-0">Basic</h2>
+                            </div>
+                            <div class="px-4 py-5 text-center bg-primary pricing-label mb-2">
+                                <h1 class="mb-0">
+                                    @Model.FirstOrDefault(e => e.CurrentPlanType == PlanType.Basic)?.Price.ToString("C") 
+                                    <span class="text-secondary fs-5 fw-normal">/weekly</span>
+                                </h1>
+                                <p class="mb-0">Basic Waste Pickup</p>
+                            </div>
+                            <div class="p-4 text-center fs-5">
+                                <p><i class="fa fa-check text-success me-2"></i>Pickup Services</p>
+                                <p><i class="fa fa-check text-success me-2"></i>Trash</p>
+                                <p><i class="fa fa-check text-success me-2"></i>Re-Service at No-Charge</p>
+                                <p><i class="fa fa-check text-success me-2"></i>Recycling</p>
+                                <p><i class="fa fa-check text-success me-2"></i>Yard Waste</p>
+                                <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-3">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (Model.Any(e => e.CurrentPlanType == PlanType.Standard))
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="rounded bg-light pricing-item">
+                        <div class="bg-dark py-3 px-5 text-center rounded-top border-bottom border-primary">
+                            <h2 class="m-0 text-primary">Standard</h2>
+                        </div>
+                        <div class="px-4 py-5 text-center bg-dark pricing-label pricing-featured mb-2">
+                            <h1 class="mb-0 text-primary">
+                                @Model.FirstOrDefault(e => e.CurrentPlanType == PlanType.Standard)?.Price.ToString("C") 
+                                <span class="fs-5 fw-normal">/mo</span>
+                            </h1>
+                            <p class="mb-0 text-white">Standard Waste Pickup</p>
+                        </div>
+                        <div class="p-4 text-center fs-5">
+                            <p><i class="fa fa-check text-success me-2"></i> Lodging Solutions</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Convention Centers</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Re-Service at No-Charge</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Re</p>
+                            <p><i class="fa fa-check text-success me-2"></i>SmartEnergy Compactor</p>
+                            <button type="button" class="btn btn-dark border-0 text-primary rounded-pill px-4 py-3 mt-3">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+            @if (Model.Any(e => e.CurrentPlanType == PlanType.Premium))
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="rounded bg-light pricing-item">
+                        <div class="bg-primary py-3 px-5 text-center rounded-top border-bottom border-dark">
+                            <h2 class="m-0">Premium</h2>
+                        </div>
+                        <div class="px-4 py-5 text-center bg-primary pricing-label mb-2">
+                            <h1 class="mb-0">
+                                @Model.FirstOrDefault(e => e.CurrentPlanType == PlanType.Premium)?.Price.ToString("C") 
+                                <span class="text-secondary fs-5 fw-normal">/yr</span>
+                            </h1>
+                            <p class="mb-0">Premium Pest Control</p>
+                        </div>
+                        <div class="p-4 text-center fs-5">
+                            <p><i class="fa fa-check text-success me-2"></i>Dumpster Rental</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Construction Waste</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Re-Service at No-Charge</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Bagster Bag</p>
+                            <p><i class="fa fa-check text-success me-2"></i>Bulk Pickup</p>
+                            <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-3">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        
+        </div>
+    </div>
+
+    <script src="~/Template/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="~/Template/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Template/assets/js/sidebarmenu.js"></script>
+    <script src="~/Template/assets/js/app.min.js"></script>
+    <script src="~/Template/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="~/Template/assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="~/Template/assets/js/dashboard.js"></script>
+</body> *@
 
 <link rel="stylesheet" href="~/Template/css/pending.css">
-
 
 @{
     ViewData["Title"] = "PendingPlan";
@@ -11,9 +127,7 @@
 
 <h1>Pending Plan</h1>
 
-<p>
-    <a asp-action="CreatePlan">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>

@@ -43,7 +43,7 @@ namespace WasteManagementApi.Controllers
             return Ok(waste.Data);
         }
 
-        [HttpGet]
+        [HttpGet("allconnections")]
         public async Task<IActionResult> GetAllWasteRequest()
         {
             var wastes = await _collection.GetAll();
@@ -75,7 +75,7 @@ namespace WasteManagementApi.Controllers
                 return BadRequest(implement.Message);
             }
 
-            return Ok(implement.Message);
+            return Ok(implement.Data);
         }
 
       

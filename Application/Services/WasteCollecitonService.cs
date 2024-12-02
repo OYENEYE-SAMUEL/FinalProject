@@ -56,7 +56,7 @@ namespace Application.Services
         public async Task<BaseResponse<WasteCollectionResponseModel>> Create(WasteCollectionRequestModel request)
         {
 
-            var user = _currentUser.GetCurrentUser();
+           /* var user = _currentUser.GetCurrentUser();
             if (user == null)
             {
                 return new BaseResponse<WasteCollectionResponseModel>
@@ -77,7 +77,7 @@ namespace Application.Services
                     Message = "Only authorized users can create reports",
                     Status = false
                 };
-            }
+            }*/
 
             var waste = new WasteCollection()
             {
@@ -142,8 +142,8 @@ namespace Application.Services
 
         public async Task<BaseResponse<ICollection<WasteCollectionResponseModel>>> RequestAssignedToStaff(Guid staffId)
         {
-            var staffs = await _staffRepo.Get(staffId);
-            if (staffs == null || !staffs.IsActive)
+            var staff = await _staffRepo.Get(staffId);
+            if (staff == null || !staff.IsActive)
             {
                 return new BaseResponse<ICollection<WasteCollectionResponseModel>>
                 {
@@ -166,17 +166,18 @@ namespace Application.Services
 
             foreach (var item in collections)
             {
-                item.StaffId = staffs.Id;
+                item.StaffId = staff.Id;
                 item.IsActive = true;
                 await _wasteRepo.Update(item);
             }
 
-            await _staffRepo.Update(staffs);
+            await _unitOfWork.Save();
+           
 
             var assignedCollections = collections.Select(wasteCollection => new WasteCollectionResponseModel
             {
                 Location = wasteCollection.Location,
-                StaffId = staffs.Id,
+                StaffId = wasteCollection.StaffId.GetValueOrDefault(),
                 IsActive = wasteCollection.IsActive
 
             }).ToList();
