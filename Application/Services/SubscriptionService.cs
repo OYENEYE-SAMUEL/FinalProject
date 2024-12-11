@@ -57,11 +57,11 @@ namespace Application.Services
                     Message = "User Not Found"
                 };
             }*/
-            var exist = await _subscribeRepo.Check(e => e.IsActive.Equals(true));
+            var exist = await _subscribeRepo.Check(e => e.IsActive == true);
 
             if (exist)
             {
-                return new BaseResponse<SubscriptionResponseModel>
+                    return new BaseResponse<SubscriptionResponseModel>
                 {
                     Message = "There is an active plan presently",
                     Data = null,

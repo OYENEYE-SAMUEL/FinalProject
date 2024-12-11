@@ -6,13 +6,12 @@ namespace WasteSystemApp.Controllers
 {
     public class IndividualController : Controller
     {
-        Uri baseAddress = new Uri("https://localhost:7068/api");
         private readonly HttpClient _client;
 
         public IndividualController(IHttpClientFactory factory)
         {
             _client = factory.CreateClient();
-            _client.BaseAddress = baseAddress;
+            _client.Timeout = TimeSpan.FromMinutes(5); 
         }
         public IActionResult DashBoard()
         {
@@ -39,14 +38,14 @@ namespace WasteSystemApp.Controllers
 
                 else
                 {
-                    TempData["error"] = await response.Content.ReadAsStringAsync();
+                    TempData["RegError"] = await response.Content.ReadAsStringAsync();
                     return View("RegisterPerson");
                 }
             }
             catch (Exception ex)
             {
 
-                TempData["error"] = $"An error occurred: {ex.Message}";
+                TempData["ExceptionError"] = $"An error occurred: {ex.Message}";
                 return RedirectToAction("RegisterPerson");
             }
         }
@@ -64,7 +63,7 @@ namespace WasteSystemApp.Controllers
                 { PropertyNameCaseInsensitive = true });
                 return View(subcribe);
             }
-
+            TempData["PlanError"] = response.Content.ReadAsStringAsync();
             return RedirectToAction("DashBoard");
         }
 
@@ -78,6 +77,7 @@ namespace WasteSystemApp.Controllers
                 { PropertyNameCaseInsensitive = true });
                 return View(getPlan);
             }
+            TempData["AllError"] = response.Content.ReadAsStringAsync();
             return RedirectToAction("DashBoard");
         }
 
@@ -95,20 +95,20 @@ namespace WasteSystemApp.Controllers
                 var response = await _client.PostAsJsonAsync("https://localhost:7068/api/WasteCollections/WasteRequest", request);
                 if (response.IsSuccessStatusCode)
                 {
-                    TempData["wastesuccess"] = await response.Content.ReadAsStringAsync();
+                    TempData["WasteSuccess"] = await response.Content.ReadAsStringAsync();
                     return RedirectToAction("DashBoard");
                 }
 
                 else
                 {
-                    TempData["wasteerror"] = await response.Content.ReadAsStringAsync();
+                    TempData["WasteError"] = await response.Content.ReadAsStringAsync();
                     return RedirectToAction("WasteRequest");
                 }
 
             }
             catch (Exception ex)
             {
-                TempData["error"] = $"An error occurred: {ex.Message}";
+                TempData["ExceptionError"] = $"An error occurred: {ex.Message}";
                 return RedirectToAction("WasteRequest");
             }
         }
@@ -123,7 +123,7 @@ namespace WasteSystemApp.Controllers
                 { PropertyNameCaseInsensitive = true });
                 return View(getWaste);
             }
-
+            TempData["RequestError"] = response.Content.ReadAsStringAsync();
             return RedirectToAction("DashBoard");
         }
 
@@ -147,14 +147,14 @@ namespace WasteSystemApp.Controllers
 
                 else
                 {
-                    TempData["error"] = await response.Content.ReadAsStringAsync();
+                    TempData["ReportError"] = await response.Content.ReadAsStringAsync();
                     return RedirectToAction("MakeReport");
                 }
 
             }
             catch (Exception ex)
             {
-                TempData["error"] = $"An error occurred: {ex.Message}";
+                TempData["ExceptionError"] = $"An error occurred: {ex.Message}";
                 return RedirectToAction("MakeReport");
             }
         }
@@ -169,7 +169,7 @@ namespace WasteSystemApp.Controllers
                 { PropertyNameCaseInsensitive = true });
                 return View(report);
             }
-
+            TempData["AllError"] = response.Content.ReadAsStringAsync();
             return RedirectToAction("DashBoard");
         }
     }

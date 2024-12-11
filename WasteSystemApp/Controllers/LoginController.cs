@@ -41,7 +41,8 @@ namespace WasteSystemApp.Controllers
 
             if (userData.Token == null)
             {
-                TempData["authmessage"] = userData.Message;              
+                TempData["AuthMessage"] = userData.Message;  
+                return View(request);
             }
 
 			HttpContext.Session.SetString("JWToken", userData.Token.ToString());

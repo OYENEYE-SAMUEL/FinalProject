@@ -1,62 +1,201 @@
-﻿@model Application.DTOs.IndividualRequestModel
+﻿@using Domain.Enum
+@model Application.DTOs.IndividualRequestModel
 
 @{
     ViewData["Title"] = "RegisterPerson";
+
 }
 
-<h1>Register Person</h1>
+<style>
+    /* Global Styles */
+    body {
+        background-color: #fff9e6; /* Soft yellow background */
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
 
+    /* Container Styling */
+    .row {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 2px solid #ffd700;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Form Group */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Label Styling */
+    .control-label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+        color: #444;
+    }
+
+    /* Input Field */
+    .form-control {
+        border: 1px solid #333;
+        border-radius: 5px;
+        padding: 12px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #fdfbe4;
+        color: #000;
+    }
+
+        .form-control:focus {
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+            outline: none;
+        }
+
+    /* Button */
+    .btn {
+        background-color: #ffd700;
+        color: #000;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%; /* Full-width button for better layout */
+    }
+
+        .btn:hover {
+            background-color: #e6c200;
+            color: #fff;
+        }
+
+    /* Validation Message */
+    .text-danger {
+        font-size: 0.9em;
+        color: #d9534f;
+    }
+
+    /* Link Styling */
+    a {
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        a:hover {
+            text-decoration: underline;
+            color: #e6c200;
+        }
+
+    /* Heading Styling */
+    h1 {
+        text-align: center;
+        color: #333;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    /* HR Styling */
+    hr {
+        border: 1px solid #ffd700;
+        margin: 20px 0;
+    }
+
+
+    .btn-link {
+        display: inline-block;
+        background-color: #ffd700; /* Gold background */
+        color: #000; /* Black text */
+        padding: 12px 20px; /* Padding for the button */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        text-align: center; /* Center text */
+        text-decoration: none; /* Remove underline */
+        font-weight: bold; /* Bold text */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth hover transition */
+    }
+
+        .btn-link:hover {
+            background-color: #e6c200; /* Darker gold on hover */
+            color: #fff; /* White text on hover */
+</style>
+
+<h1>Individual Registration</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="RegisterPerson">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Gender" class="control-label"></label>
-                <input asp-for="Gender" class="form-control" />
-                <span asp-validation-for="Gender" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+    <form asp-action="RegisterPerson">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <!-- First Name Field -->
+        <div class="form-group">
+            <label asp-for="FirstName" class="control-label">First Name</label>
+            <input asp-for="FirstName" class="form-control" placeholder="Enter your first name" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+
+        <!-- Last Name Field -->
+        <div class="form-group">
+            <label asp-for="LastName" class="control-label">Last Name</label>
+            <input asp-for="LastName" class="form-control" placeholder="Enter your last name" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+
+        <!-- Address Field -->
+        <div class="form-group">
+            <label asp-for="Address" class="control-label">Address</label>
+            <input asp-for="Address" class="form-control" placeholder="Enter your address" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+
+        <!-- Gender Field -->
+        <div class="form-group">
+            <label asp-for="Gender" class="control-label">Gender</label>
+            <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()" >
+                <option value="">Select Gender</option>
+            </select>
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+
+        <!-- Phone Number Field -->
+        <div class="form-group">
+            <label asp-for="PhoneNumber" class="control-label">Phone Number</label>
+            <input asp-for="PhoneNumber" class="form-control" placeholder="Enter your phone number" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+            <label asp-for="Email" class="control-label">Email</label>
+            <input asp-for="Email" type="email" class="form-control" placeholder="Enter your email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+            <label asp-for="Password" class="control-label">Password</label>
+            <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn" />
+        </div>
+    </form>
 </div>
 
-<div>
-    <a asp-action="DashBoard">Back to List</a>
+<div style="text-align: center; margin-top: 20px;">
+    <a asp-controller="Login" asp-action="Login" class="btn-link">Back to Login</a>
 </div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

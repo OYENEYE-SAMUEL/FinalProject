@@ -14,7 +14,7 @@ namespace Application.DTOs
 
     public class WasteCollectionResponseModel
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; } 
         public string Location { get; set; } = default!;
         public DateTime DateCreated { get; set; }
         public WasteReport WasteReport { get; set; }

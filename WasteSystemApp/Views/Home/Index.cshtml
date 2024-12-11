@@ -83,15 +83,13 @@
                 </button>
                 <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="#" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <a href="@Url.Action("Home", "Index")" class="nav-item nav-link active">Home</a>
+                      
                         <a href="@Url.Action("Login", "Login")" class="nav-item nav-link">Login</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pring Plan</a>
                             <div class="dropdown-menu m-0 bg-primary">
-                                <a href="@Url.Content("~/Views/Home/Index.cshtml")" class="dropdown-item">Pricing Plan</a>
+                                <a href="@Url.Action("Home", "Index")" class="dropdown-item">Pricing Plan</a>
                             </div>
                         </div>
                         <a href="#" class="nav-item nav-link">Contact</a>
@@ -369,7 +367,7 @@
                             <h2 class="m-0">Basic</h2>
                         </div>
                         <div class="px-4 py-5 text-center bg-primary pricing-label mb-2">
-                            <h1 class="mb-0">#90,000<span class="text-secondary fs-5 fw-normal">/weekly</span></h1>
+                            <h1 class="mb-0">#5,000<span class="text-secondary fs-5 fw-normal">/weekly</span></h1>
                             <p class="mb-0">Basic Waste Pickup</p>
                         </div>
                         <div class="p-4 text-center fs-5">
@@ -388,7 +386,7 @@
                             <h2 class="m-0 text-primary">Standard</h2>
                         </div>
                         <div class="px-4 py-5 text-center bg-dark pricing-label pricing-featured mb-2">
-                            <h1 class="mb-0 text-primary">#120,000<span class="fs-5 fw-normal">/mo</span></h1>
+                            <h1 class="mb-0 text-primary">#20,000<span class="fs-5 fw-normal">/mo</span></h1>
                             <p class="mb-0 text-white">Standard Waste Pickup</p>
                         </div>
                         <div class="p-4 text-center fs-5">
@@ -407,7 +405,7 @@
                             <h2 class="m-0">Premium</h2>
                         </div>
                         <div class="px-4 py-5 text-center bg-primary pricing-label mb-2">
-                            <h1 class="mb-0">#200,000<span class="text-secondary fs-5 fw-normal">/yr</span></h1>
+                            <h1 class="mb-0">#150,000<span class="text-secondary fs-5 fw-normal">/yr</span></h1>
                             <p class="mb-0">Premium Pest Control</p>
                         </div>
                         <div class="p-4 text-center fs-5">

@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\WasteSystemApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\SideBar\\SideBar.css",
+      "PackagePath": "staticwebassets\\SideBar\\SideBar.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\SideBar\\file.png",
+      "PackagePath": "staticwebassets\\SideBar\\file.png"
+    },
+    {
       "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\Js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Template\\Js\\bootstrap.min.js"
     },
@@ -3111,66 +3119,6 @@
     {
       "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\landing\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
       "PackagePath": "staticwebassets\\Template\\landing\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\css\\style.css",
-      "PackagePath": "staticwebassets\\Template\\register\\css\\style.css"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\css\\style.css.map",
-      "PackagePath": "staticwebassets\\Template\\register\\css\\style.css.map"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\css\\style.scss",
-      "PackagePath": "staticwebassets\\Template\\register\\css\\style.scss"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\fonts\\material-design-iconic-font\\css\\material-design-iconic-font.css",
-      "PackagePath": "staticwebassets\\Template\\register\\fonts\\material-design-iconic-font\\css\\material-design-iconic-font.css"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\fonts\\material-design-iconic-font\\css\\material-design-iconic-font.min.css",
-      "PackagePath": "staticwebassets\\Template\\register\\fonts\\material-design-iconic-font\\css\\material-design-iconic-font.min.css"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\fonts\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.eot",
-      "PackagePath": "staticwebassets\\Template\\register\\fonts\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.eot"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\fonts\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.svg",
-      "PackagePath": "staticwebassets\\Template\\register\\fonts\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.svg"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\fonts\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.ttf",
-      "PackagePath": "staticwebassets\\Template\\register\\fonts\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.ttf"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\fonts\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff",
-      "PackagePath": "staticwebassets\\Template\\register\\fonts\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\fonts\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff2",
-      "PackagePath": "staticwebassets\\Template\\register\\fonts\\material-design-iconic-font\\fonts\\Material-Design-Iconic-Font.woff2"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\fonts\\muli\\Muli-Bold.ttf",
-      "PackagePath": "staticwebassets\\Template\\register\\fonts\\muli\\Muli-Bold.ttf"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\fonts\\muli\\Muli-Regular.ttf",
-      "PackagePath": "staticwebassets\\Template\\register\\fonts\\muli\\Muli-Regular.ttf"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\fonts\\muli\\Muli-SemiBold.ttf",
-      "PackagePath": "staticwebassets\\Template\\register\\fonts\\muli\\Muli-SemiBold.ttf"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\images\\bg-registration-form-2.jpg",
-      "PackagePath": "staticwebassets\\Template\\register\\images\\bg-registration-form-2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\Template\\register\\images\\registration-form-2.jpg",
-      "PackagePath": "staticwebassets\\Template\\register\\images\\registration-form-2.jpg"
     },
     {
       "Id": "C:\\Users\\USER\\Desktop\\MyFinalProject\\WasteSystemApp\\wwwroot\\css\\site.css",

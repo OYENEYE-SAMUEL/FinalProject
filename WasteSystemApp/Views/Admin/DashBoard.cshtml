@@ -1,31 +1,115 @@
-﻿@{
+﻿@model ICollection<Application.DTOs.StaffResponseModel>
+
+
+
+@{
     Layout = "_AdminLayout";
 }
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Layout</title>
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="~/SideBar/SideBar.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="main-wrapper">
-        <!-- Your header, sidebar, or navigation goes here -->
-
-       
-
-      @*   <div class="card">
-            <a asp-controller="Admin" asp-action="AllStaffs">All Staff</a>
-          
+   
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <i id="menu-btn" class="fa-solid fa-bars"></i>
+                <div class="search">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+            <div class="profile">
+                <i class="fa-solid fa-bell"></i>
+                <img src="IMG-20231102-WA0000.jpg" alt="Profile Image">
+            </div>
         </div>
-        <div class="card">
-            <a asp-controller="Admin" asp-action="AllCommunity">All Community</a>
-          
-        </div> *@
 
-        <!-- Optionally, render additional sections if needed, like a footer or scripts -->
-    </div>
+        <h3 class="i-name">Admin Dashboard</h3>
+
+        <div class="values">
+            <div class="val-box">
+                <i class="fa-solid fa-users"></i>
+                <div>
+                    <h3>4,789</h3>
+                    <span>New Users</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fa-solid fa-chart-line"></i>
+                <div>
+                    <h3>1,245</h3>
+                    <span>Active Users</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fa-solid fa-trash"></i>
+                <div>
+                    <h3>320</h3>
+                    <span>Waste Collected</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fa-solid fa-handshake"></i>
+                <div>
+                    <h3>152</h3>
+                    <span>Partnerships</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Staff Id</td>
+                        <td>Name</td>
+                        <td>Phone No</td>
+                        <td>Role</td>
+                        <td>Status</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td> @Html.DisplayFor(modelItem => item.StaffNumber)</td>
+                                <td><img src="IMG-20231102-WA0000.jpg" alt="Profile Image"></td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FirstName) &nbsp;@Html.DisplayFor(modelItem => item.LastName)
+                                    <br><span> @Html.DisplayFor(modelItem => item.Email)</span>
+                                </td>
+                                <td> @Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                                <td><span class="active">Role</span></td>
+                                <td><span class="active"> @Html.DisplayFor(modelItem => item.IsActive)</span></td>
+                                <td><a href="#" class="edit">Edit</a></td>
+                            </tr>
+
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" style="text-align: center;">No data available.</td>
+                        </tr>
+                    }
+
+                   
+                    </tbody>
+            </table>
+        </div>
+    </section>
 </body>
 </html>

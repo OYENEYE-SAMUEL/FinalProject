@@ -105,6 +105,24 @@
         border: 1px solid #ffd700; /* Gold line */
         margin: 20px 0; /* Spacing above and below line */
     }
+
+    .btn-link {
+        display: inline-block;
+        background-color: #ffd700; /* Gold background */
+        color: #000; /* Black text */
+        padding: 12px 20px; /* Padding for the button */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        text-align: center; /* Center text */
+        text-decoration: none; /* Remove underline */
+        font-weight: bold; /* Bold text */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth hover transition */
+    }
+
+        .btn-link:hover {
+            background-color: #e6c200; /* Darker gold on hover */
+            color: #fff; /* White text on hover */
 </style>
 
 
@@ -146,10 +164,10 @@
     </div>
 </div>
 
-<div class="text-center">
-    <a asp-action="I">Go Back</a>
-</div>
 
+<div style="text-align: center; margin-top: 20px;">
+    <a asp-controller="Login" asp-action="Login" class="btn-link">Back to Login</a>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

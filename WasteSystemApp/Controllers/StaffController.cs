@@ -6,12 +6,12 @@ namespace WasteSystemApp.Controllers
 {
     public class StaffController : Controller
     {
-      /*  Uri baseAddress = new Uri("https://localhost:7068/api");*/
         private readonly HttpClient _client;
 
         public StaffController(IHttpClientFactory factory)
         {
             _client = factory.CreateClient();
+            _client.Timeout = TimeSpan.FromMinutes(5); 
         }
         public IActionResult DashBoard()
         {
@@ -28,6 +28,7 @@ namespace WasteSystemApp.Controllers
                 { PropertyNameCaseInsensitive = true });
                 return View(report);
             }
+            TempData["AssignError"] = response.Content.ReadAsStringAsync();
             return RedirectToAction("DashBoard");
         }
     }
